@@ -1,0 +1,42 @@
+{
+  // ── Zed settings ported from kickstart init.lua ──
+  // Copy to:  %APPDATA%\Zed\settings.json   (Windows)
+  //           ~/.config/zed/settings.json   (macOS/Linux)
+
+  "vim_mode": true,
+
+  // vim.opt.number + relativenumber
+  "relative_line_numbers": true,
+
+  // vim.opt.cursorline
+  "current_line_highlight": "line",
+
+  // vim.opt.scrolloff = 10
+  "vertical_scroll_margin": 10,
+
+  // vim.opt.showmode = false  (mode shown in status bar instead)
+  "vim": {
+    // vim.opt.clipboard = 'unnamedplus'
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "highlight_on_yank_duration": 200
+  },
+
+  // ignorecase + smartcase
+  "search": {
+    "case_sensitive": false
+  },
+
+  // theme: catppuccin installed in nvim. Needs "Catppuccin" extension in Zed.
+  // Fallback to built-in "One Dark" if not installed.
+  "theme": "Catppuccin Mocha",
+
+  // conform.nvim -> format on <leader>f only, not on save
+  "format_on_save": "off",
+
+  // treesitter-style behavior is built into Zed; nothing to set.
+  "tab_size": 2,
+  "buffer_font_family": "Zed Plex Mono",
+  "ui_font_size": 15,
+  "buffer_font_size": 14
+}
