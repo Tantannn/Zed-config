@@ -1,64 +1,48 @@
-// ── Zed keymap ported from kickstart init.lua ──
-// Copy to:  %APPDATA%\Zed\keymap.json   (Windows)
-//           ~/.config/zed/keymap.json   (macOS/Linux)
-// leader = <space>. Zed spells chords with spaces: "space s f".
 [
-  // ─── Window nav: Ctrl+hjkl (works in any pane) ───
   {
-    "context": "Dock || Editor || Terminal",
+    "context": "Workspace",
     "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"]
-    }
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+    },
   },
-
-  // ─── Normal mode: leader maps (Telescope + diagnostics) ───
   {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
-      // Esc clears search highlight (vim.keymap Esc -> nohlsearch)
-      "escape": "vim::ClearSearch",
-
-      // Telescope
-      "space s f": "file_finder::Toggle",          // [S]earch [F]iles
-      "space s a": "pane::DeploySearch",           // [S]earch by [A]ll (live grep)
-      "space s w": "pane::DeploySearch",           // [S]earch current [W]ord
-      "space s d": "diagnostics::Deploy",          // [S]earch [D]iagnostics
-      "space s r": "workspace::NewSearch",         // [S]earch [R]esume
-      "space /": "buffer_search::Deploy",          // fuzzy find in current buffer
-      "space space": "tab_switcher::Toggle",       // find existing buffers
-
-      // Diagnostics
-      "[ d": "editor::GoToPreviousDiagnostic",
-      "] d": "editor::GoToDiagnostic",
-      "space e": "editor::Hover",                   // show diagnostic/hover float
-      "space q": "diagnostics::Deploy",             // quickfix-like list
-
-      // LSP
-      "g d": "editor::GoToDefinition",              // [G]oto [D]efinition
-      "g r": "editor::FindAllReferences",           // [G]oto [R]eferences
-      "shift-g shift-i": "editor::GoToImplementation", // gI
-      "g shift-d": "editor::GoToDeclaration",       // gD
-      "shift-k": "editor::Hover",                    // K hover docs
-      "space shift-d": "editor::GoToTypeDefinition", // type definition
-      "space d s": "outline::Toggle",               // [D]ocument [S]ymbols
-      "space w s": "project_symbols::Toggle",       // [W]orkspace [S]ymbols
-      "space r n": "editor::Rename",                // [R]e[n]ame
-      "space c a": "editor::ToggleCodeActions",     // [C]ode [A]ction
-
-      // conform.nvim format
-      "space f": "editor::Format"
+      "g r": "editor::FindAllReferences",
+      "shift-k": "editor::Hover",
+      "space o": ["workspace::SendKeystrokes", "o escape"],
+      "Y": ["workspace::SendKeystrokes", "y $"],
+      "=": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "=": "workspace::ToggleLeftDock",
+    },
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward",
+    },
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "ctrl-f": "buffer_search::Deploy",      // vim default: page down
+      "ctrl-a": "editor::SelectAll",          // vim default: increment
     }
   },
-
-  // ─── Visual mode: format + code action ───
-  {
-    "context": "Editor && vim_mode == visual && !menu",
-    "bindings": {
-      "space f": "editor::Format",
-      "space c a": "editor::ToggleCodeActions"
-    }
-  }
 ]
