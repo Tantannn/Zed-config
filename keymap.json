@@ -9,10 +9,10 @@
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "j k": "vim::NormalBefore",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-h": "editor::MoveLeft",
+      "ctrl-l": "editor::MoveRight",
+      "ctrl-k": "editor::MoveUp",
+      "ctrl-j": "editor::MoveDown",
     },
   },
   {
@@ -26,6 +26,12 @@
     },
   },
   {
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      "g s": "vim::PushAddSurrounds",
+    },
+  },
+  {
     "context": "ProjectPanel",
     "bindings": {
       "=": "workspace::ToggleLeftDock",
@@ -36,13 +42,15 @@
     "bindings": {
       "s": "vim::PushSneak",
       "shift-s": "vim::PushSneakBackward",
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp",
     },
   },
   {
     "context": "Editor && !menu",
     "bindings": {
-      "ctrl-f": "buffer_search::Deploy",      // vim default: page down
-      "ctrl-a": "editor::SelectAll",          // vim default: increment
-    }
+      "ctrl-f": "buffer_search::Deploy", // vim default: page down
+      "ctrl-a": "editor::SelectAll", // vim default: increment
+    },
   },
 ]
