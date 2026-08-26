@@ -2,6 +2,12 @@
   {
     "context": "Workspace",
     "bindings": {
+      "alt-c": "pane::CloseActiveItem",
+      "alt-p": "pane::TogglePinTab",
+      "ctrl-1": ["pane::ActivateItem", 0],
+      "ctrl-2": ["pane::ActivateItem", 1],
+      "ctrl-3": ["pane::ActivateItem", 2],
+      "ctrl-4": ["pane::ActivateItem", 3],
       // "shift shift": "file_finder::Toggle"
     },
   },
@@ -23,6 +29,8 @@
       "space o": ["workspace::SendKeystrokes", "o escape"],
       "Y": ["workspace::SendKeystrokes", "y $"],
       "=": "project_panel::ToggleFocus",
+      "tab": "workspace::ActivateNextPane",
+      "shift-tab": "workspace::ActivatePreviousPane",
     },
   },
   {
@@ -50,7 +58,7 @@
     "context": "Editor && !menu",
     "bindings": {
       "ctrl-f": "buffer_search::Deploy", // vim default: page down
-      "ctrl-a": "editor::SelectAll", // vim default: increment
+      "alt-a": "editor::SelectAll", // vim default: increment
     },
   },
 ]
