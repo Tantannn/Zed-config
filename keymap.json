@@ -44,6 +44,7 @@
       "g s": "vim::PushAddSurrounds",
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp",
+      "space p": ["workspace::SendKeystrokes", "\" _ d P"]
     },
   },
   {
