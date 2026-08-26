@@ -8,6 +8,11 @@
       "ctrl-2": ["pane::ActivateItem", 1],
       "ctrl-3": ["pane::ActivateItem", 2],
       "ctrl-4": ["pane::ActivateItem", 3],
+      "ctrl-5": ["pane::ActivateItem", 5],
+      "ctrl-6": ["pane::ActivateItem", 6],
+      "ctrl-7": ["pane::ActivateItem", 7],
+      "ctrl-8": ["pane::ActivateItem", 8],
+      "ctrl-9": ["pane::ActivateItem", 9],
       // "shift shift": "file_finder::Toggle"
     },
   },
@@ -37,6 +42,8 @@
     "context": "Editor && vim_mode == visual && !menu",
     "bindings": {
       "g s": "vim::PushAddSurrounds",
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp",
     },
   },
   {
@@ -50,8 +57,6 @@
     "bindings": {
       "s": "vim::PushSneak",
       "shift-s": "vim::PushSneakBackward",
-      "J": "editor::MoveLineDown",
-      "K": "editor::MoveLineUp",
     },
   },
   {
