@@ -31,11 +31,12 @@
     "bindings": {
       "g r": "editor::FindAllReferences",
       "shift-k": "editor::Hover",
-      "space o": ["workspace::SendKeystrokes", "o escape"],
       "Y": ["workspace::SendKeystrokes", "y $"],
       "=": "project_panel::ToggleFocus",
       "tab": "workspace::ActivateNextPane",
       "shift-tab": "workspace::ActivatePreviousPane",
+      "space o": ["workspace::SendKeystrokes", "o escape"],
+      "space g v": "git::ViewUnstagedChanges"
     },
   },
   {
