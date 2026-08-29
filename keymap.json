@@ -36,7 +36,8 @@
       "tab": "workspace::ActivateNextPane",
       "shift-tab": "workspace::ActivatePreviousPane",
       "space o": ["workspace::SendKeystrokes", "o escape"],
-      "space g v": "git::ViewUnstagedChanges"
+      "space g v": "git::ViewUnstagedChanges",
+      "ctrl-w o": "pane::CloseOtherItems",
     },
   },
   {
@@ -45,7 +46,7 @@
       "g s": "vim::PushAddSurrounds",
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp",
-      "space p": ["workspace::SendKeystrokes", "\" _ d P"]
+      "space p": ["workspace::SendKeystrokes", "\" _ d P"],
     },
   },
   {
@@ -64,8 +65,20 @@
   {
     "context": "Editor && !menu",
     "bindings": {
-      "ctrl-f": "buffer_search::Deploy", // vim default: page down
-      "alt-a": "editor::SelectAll", // vim default: increment
+      "ctrl-f": "buffer_search::Deploy",
+      "alt-a": "editor::SelectAll",
     },
   },
+  {
+      "context": "ProjectPanel && not_editing",
+      "bindings": {
+        "o": "project_panel::NewFile",
+        "shift-o": "project_panel::NewDirectory",
+        "r": "project_panel::Rename",
+        "d": "project_panel::Trash",
+        "c": "project_panel::Copy",
+        "x": "project_panel::Cut",
+        "p": "project_panel::Paste"
+      }
+    }
 ]
