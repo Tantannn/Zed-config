@@ -12,7 +12,7 @@
     "quick_actions": false,
     "selections_menu": false,
     "agent_review": false,
-    "code_actions": false
+    "code_actions": false,
   },
   "preview_tabs": {
     "enable_preview_multibuffer_from_code_navigation": true,
@@ -26,7 +26,7 @@
     },
   },
   "autosave": "on_window_change",
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "git_panel": {
     "tree_view": false,
   },
@@ -58,5 +58,13 @@
   },
   "gutter": {
     "min_line_number_digits": 1,
+  },
+  "terminal": {
+    "shell": {
+      "with_arguments": {
+        "program": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+        "args": ["--login"],
+      },
+    },
   },
 }
