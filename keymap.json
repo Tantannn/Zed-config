@@ -32,7 +32,7 @@
       "g r": "editor::FindAllReferences",
       "shift-k": "editor::Hover",
       "Y": ["workspace::SendKeystrokes", "y $"],
-      "=": "project_panel::ToggleFocus",
+      "-": "project_panel::ToggleFocus",
       "tab": "workspace::ActivateNextPane",
       "shift-tab": "workspace::ActivatePreviousPane",
       "space o": ["workspace::SendKeystrokes", "o escape"],
@@ -52,7 +52,7 @@
   {
     "context": "ProjectPanel",
     "bindings": {
-      "=": "workspace::ToggleLeftDock",
+      "-": "workspace::ToggleLeftDock",
     },
   },
   {
@@ -70,15 +70,24 @@
     },
   },
   {
-      "context": "ProjectPanel && not_editing",
-      "bindings": {
-        "o": "project_panel::NewFile",
-        "shift-o": "project_panel::NewDirectory",
-        "r": "project_panel::Rename",
-        "d": "project_panel::Trash",
-        "c": "project_panel::Copy",
-        "x": "project_panel::Cut",
-        "p": "project_panel::Paste"
-      }
-    }
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "o": "project_panel::NewFile",
+      "shift-o": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Trash",
+      "c": "project_panel::Copy",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+    },
+  },
 ]
