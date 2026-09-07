@@ -50,12 +50,6 @@
     },
   },
   {
-    "context": "ProjectPanel",
-    "bindings": {
-      "-": "workspace::ToggleLeftDock",
-    },
-  },
-  {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
       "s": "vim::PushSneak",
@@ -72,6 +66,7 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      "-": "workspace::ToggleLeftDock",
       "o": "project_panel::NewFile",
       "shift-o": "project_panel::NewDirectory",
       "r": "project_panel::Rename",
