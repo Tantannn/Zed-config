@@ -67,4 +67,6 @@
       },
     },
   },
+  "go_to_definition_fallback": "none",
+  "relative_line_numbers": "enabled"
 }
