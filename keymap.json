@@ -32,6 +32,8 @@
       "g r": "editor::FindAllReferences",
       "shift-k": "editor::Hover",
       "Y": ["workspace::SendKeystrokes", "y $"],
+      " D": ["workspace::SendKeystrokes", "\" _ D"],
+      " Y": ["workspace::SendKeystrokes", "\" + y $"],
       "-": "project_panel::ToggleFocus",
       "tab": "workspace::ActivateNextPane",
       "shift-tab": "workspace::ActivatePreviousPane",
@@ -47,13 +49,20 @@
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp",
       "space p": ["workspace::SendKeystrokes", "\" _ d P"],
+      "space d": ["workspace::SendKeystrokes", "\" _ d"],
     },
   },
+  // {
+  //   "context": "vim_mode == normal || vim_mode == visual",
+  //   "bindings": {
+  //     "s": "vim::PushSneak",
+  //     "shift-s": "vim::PushSneakBackward",
+  //   },
+  // },
   {
-    "context": "vim_mode == normal || vim_mode == visual",
+    "context": "VimControl && !menu",
     "bindings": {
-      "s": "vim::PushSneak",
-      "shift-s": "vim::PushSneakBackward",
+      "s": "vim::HelixJumpToWord",
     },
   },
   {
