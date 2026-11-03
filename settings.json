@@ -7,6 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "allow_data_collection": "yes"
+  },
+  "cli_default_open_behavior": "existing_window",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "accessible_mode": true,
+  "enable_language_server": true,
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
@@ -25,7 +48,11 @@
       "enabled": true,
     },
   },
-  "autosave": "on_window_change",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
   "diff_view_style": "split",
   "git_panel": {
     "tree_view": false,
@@ -43,7 +70,11 @@
       "type": "registry",
     },
   },
-  "icon_theme": "Catppuccin Macchiato",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato"
+  },
   "base_keymap": "VSCode",
   "ui_font_size": 15,
   "buffer_font_size": 13,
@@ -60,6 +91,7 @@
     "min_line_number_digits": 1,
   },
   "terminal": {
+    "dock": "bottom",
     "shell": {
       "with_arguments": {
         "program": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
