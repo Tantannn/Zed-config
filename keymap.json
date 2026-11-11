@@ -72,6 +72,8 @@
     "bindings": {
       "ctrl-f": "buffer_search::Deploy",
       "alt-a": "editor::SelectAll",
+      "space f f": "file_finder::Toggle",
+      "ctrl-shift-f": "text_finder::Toggle"
     },
   },
   {
