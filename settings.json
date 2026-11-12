@@ -57,6 +57,7 @@
   "diff_view_style": "split",
   "git_panel": {
     "tree_view": false,
+    "entry_primary_click_action": "file_diff",
   },
   "project_panel": {
     "dock": "left",
