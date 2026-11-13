@@ -64,7 +64,7 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "s": "vim::HelixJumpToWord",
+      "space s": "vim::HelixJumpToWord",
     },
   },
   {
